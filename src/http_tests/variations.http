@@ -1,8 +1,31 @@
-### Test the stores
+### Test the variations
 ### variations are the product variations
 
 GET http://localhost:3001/variations
 
 ### Test creating a variation
+POST http://localhost:3001/variations
+Content-Type: application/json
+
+{
+  "base": "shirt",
+  "variation1": "polo",
+  "variation2": "shortSleeve",
+  "variation3": "tShirt"
+}
 
 ### Test the PUT which should change a variation
+PUT http://localhost:3001/variations/5f3252eb7e9ed513b06cca04
+Content-Type: application/json
+
+{
+  "base": "shirt",
+  "variation1": "polo",
+  "variation2": "shortSleeve",
+  "variation3": "tShirt",
+  "variation4": "vNeck",
+  "variation5": "quarterZip"
+}
+
+### test DELETE
+DELETE http://localhost:3001/variations/5f3252eb7e9ed513b06cca04

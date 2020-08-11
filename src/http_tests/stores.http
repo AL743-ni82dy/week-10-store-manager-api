@@ -4,5 +4,33 @@
 GET http://localhost:3001/stores
 
 ### Test creating a store
+POST http://localhost:3001/stores
+Content-Type: application/json
+
+{
+  "name": "Belmont Country Club",
+  "address": "181 Winter Street",
+  "city": "Belmont",
+  "state": "Massachusetts",
+  "zip": "02478",
+  "website": "https://belmontcc.org",
+  "logo": "belmontccLogo2010a"
+}
 
 ### Test the PUT which should change a store
+PUT http://localhost:3001/stores/5f3246417e9ed513b06cca00
+Content-Type: application/json
+
+{
+  "name": "Belmont Country Club",
+  "address": "181 Winter Street",
+  "city": "Belmont",
+  "state": "Massachusetts",
+  "zip": "02478",
+  "website": "https://belmontcc.org",
+  "logo": "belmontccLogo2019b"
+}
+
+### Test the DELETE of a store
+
+DELETE http://localhost:3001/stores/5f3246417e9ed513b06cca00
